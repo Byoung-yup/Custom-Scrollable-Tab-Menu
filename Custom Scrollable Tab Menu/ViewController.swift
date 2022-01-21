@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var scrollView: ScrollView!
+    
     let menu: [String] = ["빨간색", "주황색", "노란색", "초록색", "파란색", "보라색"]
     
     var menuCollectionView: UICollectionView = {
@@ -36,7 +38,7 @@ class ViewController: UIViewController {
         self.view.addSubview(menuCollectionView)
         self.menuCollectionView.translatesAutoresizingMaskIntoConstraints = false
 
-        let scrollView = ScrollView()
+        self.scrollView = ScrollView()
         self.view.addSubview(scrollView)        
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -62,11 +64,6 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UIScrollViewDelegate {
-    
-}
-
-
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,6 +75,25 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.lbl.text = self.menu[indexPath.row]
         return cell
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            self.scrollView.scrollView.setContentOffset(CGPoint.zero, animated: true)
+        case 1:
+            self.scrollView.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width, y: 0), animated: true)
+        case 2:
+            self.scrollView.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width * 2, y: 0), animated: true)
+        case 3:
+            self.scrollView.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width * 3, y: 0), animated: true)
+        case 4:
+            self.scrollView.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width * 4, y: 0), animated: true)
+        case 5:
+            self.scrollView.scrollView.setContentOffset(CGPoint(x: self.scrollView.frame.width * 5, y: 0), animated: true)
+        default :
+            break
+        }
     }
     
 }
