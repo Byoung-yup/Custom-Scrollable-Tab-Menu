@@ -66,14 +66,12 @@ class ScrollView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.loadNib()
-        self.setDelegate()
         self.setUpInScrollView()
        
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
     }
     
     func loadNib() {
@@ -148,13 +146,8 @@ class ScrollView: UIView {
             contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor, multiplier: 6/1)
         ])
         
-        
-        
     }
+    
 }
 
-extension ScrollView: UIScrollViewDelegate {
-    func setDelegate() {
-        scrollView.delegate = self
-    }
-}
+

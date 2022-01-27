@@ -13,7 +13,9 @@ class MenuCell: UICollectionViewCell {
         let lbl = UILabel()
         lbl.font = UIFont.systemFont(ofSize: 20)
         lbl.textAlignment = .center
-        lbl.textColor = .black
+        lbl.layer.borderWidth = 0.2
+        lbl.layer.borderColor = UIColor.red.cgColor
+        
         return lbl
     }()
 
@@ -40,5 +42,11 @@ class MenuCell: UICollectionViewCell {
             self.lbl.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
             self.lbl.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor)
         ])
+        
+    }
+    
+    func setStatus(name: String, isTouched: Bool) {
+        self.lbl.textColor = isTouched ? .purple : .darkGray
+        self.lbl.text = name
     }
 }
