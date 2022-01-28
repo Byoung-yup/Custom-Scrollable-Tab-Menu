@@ -13,8 +13,6 @@ class ViewController: UIViewController {
     
     var scrollView: ScrollView!
     
-    var indicatorView: IndicatorView!
-    
     let menu: [String] = ["빨간색", "주황색", "노란색", "초록색", "파란색", "보라색"]
     
     var menuCollectionView: UICollectionView = {
@@ -46,30 +44,19 @@ class ViewController: UIViewController {
         self.view.addSubview(scrollView)        
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         
-        self.indicatorView = IndicatorView()
-        self.view.addSubview(self.indicatorView)
-        self.indicatorView.translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: self.indicatorView.safeAreaLayoutGuide.bottomAnchor, constant: 30),
+            scrollView.topAnchor.constraint(equalTo: self.menuCollectionView.safeAreaLayoutGuide.bottomAnchor, constant: 15),
             scrollView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -15),
             scrollView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
         ])
          
         
         NSLayoutConstraint.activate([
             self.menuCollectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            self.menuCollectionView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-            self.menuCollectionView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            self.menuCollectionView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 15),
+            self.menuCollectionView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -15),
             self.menuCollectionView.heightAnchor.constraint(equalToConstant: 50)
-        ])
-        
-        NSLayoutConstraint.activate([
-            self.indicatorView.topAnchor.constraint(equalTo: self.menuCollectionView.bottomAnchor),
-            self.indicatorView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-            self.indicatorView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width / 5),
-            self.indicatorView.heightAnchor.constraint(equalToConstant: 5)
         ])
     }
     
@@ -128,14 +115,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (self.menuCollectionView.frame.width) / 5
+        let width = (UIScreen.main.bounds.width) / 5
         let height = self.menuCollectionView.frame.height
-
+        
         return CGSize(width: width, height: height)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
     }
 }
 
@@ -163,5 +146,5 @@ extension ViewController: UIScrollViewDelegate {
         
         self.menuCollectionView.reloadData()
     }
-     
+
 }

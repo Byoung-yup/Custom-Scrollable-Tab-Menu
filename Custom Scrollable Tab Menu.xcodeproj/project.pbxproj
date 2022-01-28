@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3412691227A28427002F3C8E /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3412691127A28427002F3C8E /* IndicatorView.swift */; };
-		3412691427A2842E002F3C8E /* IndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3412691327A2842E002F3C8E /* IndicatorView.xib */; };
 		3496F1BD279941CE00225BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F1BC279941CE00225BCA /* AppDelegate.swift */; };
 		3496F1BF279941CE00225BCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F1BE279941CE00225BCA /* SceneDelegate.swift */; };
 		3496F1C1279941CE00225BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3496F1C0279941CE00225BCA /* ViewController.swift */; };
@@ -22,8 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3412691127A28427002F3C8E /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
-		3412691327A2842E002F3C8E /* IndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndicatorView.xib; sourceTree = "<group>"; };
 		3496F1B9279941CE00225BCA /* Custom Scrollable Tab Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom Scrollable Tab Menu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3496F1BC279941CE00225BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3496F1BE279941CE00225BCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,8 +70,6 @@
 				3496F1D9279954DA00225BCA /* MenuCell.xib */,
 				3496F1D0279945F900225BCA /* ScrollView.swift */,
 				3496F1D22799460000225BCA /* ScrollView.xib */,
-				3412691127A28427002F3C8E /* IndicatorView.swift */,
-				3412691327A2842E002F3C8E /* IndicatorView.xib */,
 				3496F1C0279941CE00225BCA /* ViewController.swift */,
 				3496F1C2279941CE00225BCA /* Main.storyboard */,
 				3496F1C5279941D000225BCA /* Assets.xcassets */,
@@ -147,7 +141,6 @@
 				3496F1D32799460000225BCA /* ScrollView.xib in Resources */,
 				3496F1DB279954DA00225BCA /* MenuCell.xib in Resources */,
 				3496F1C6279941D000225BCA /* Assets.xcassets in Resources */,
-				3412691427A2842E002F3C8E /* IndicatorView.xib in Resources */,
 				3496F1C4279941CE00225BCA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,7 +156,6 @@
 				3496F1DA279954DA00225BCA /* MenuCell.swift in Sources */,
 				3496F1D1279945F900225BCA /* ScrollView.swift in Sources */,
 				3496F1BD279941CE00225BCA /* AppDelegate.swift in Sources */,
-				3412691227A28427002F3C8E /* IndicatorView.swift in Sources */,
 				3496F1BF279941CE00225BCA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +305,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2J2A4T2U9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Custom Scrollable Tab Menu/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -340,6 +333,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2J2A4T2U9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Custom Scrollable Tab Menu/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -11,10 +11,9 @@ class MenuCell: UICollectionViewCell {
     
     let lbl: UILabel = {
         let lbl = UILabel()
-        lbl.font = UIFont.systemFont(ofSize: 20)
+        lbl.font = UIFont.boldSystemFont(ofSize: 14)
         lbl.textAlignment = .center
-        lbl.layer.borderWidth = 0.2
-        lbl.layer.borderColor = UIColor.red.cgColor
+        lbl.layer.cornerRadius = 20
         
         return lbl
     }()
@@ -46,7 +45,8 @@ class MenuCell: UICollectionViewCell {
     }
     
     func setStatus(name: String, isTouched: Bool) {
-        self.lbl.textColor = isTouched ? .purple : .darkGray
+        self.lbl.layer.backgroundColor = isTouched ? UIColor.blue.cgColor : UIColor.clear.cgColor
+        self.lbl.textColor = isTouched ? .white : .darkGray
         self.lbl.text = name
     }
 }
